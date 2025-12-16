@@ -93,3 +93,4 @@ brew install ffmpeg
 
 **注意**：Cookie中至少需要包含SESSDATA、bili_jct、DedeUserID和buvid3/buvid4四个字段，并且是大会员账号的cookie，否则无法保证能转化大会员视频与清晰度。
 ### 效果图
+![](images/picture1.png)

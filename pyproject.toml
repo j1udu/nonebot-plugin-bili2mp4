@@ -1,0 +1,83 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nonebot-plugin-bili2mp4"
+version = "0.1.0"
+description = "在指定群内自动将B站小程序/分享链接解析并下载为MP4后发送的NoneBot2插件"
+readme = "README.md"
+requires-python = ">=3.8,<4.0"
+license = {text = "MIT"}
+authors = [
+    {name = "j1udu", email = "your-email@example.com"},
+]
+keywords = ["nonebot", "nonebot2", "bilibili", "video", "download", "mp4"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "nonebot2>=2.0.0",
+    "nonebot-adapter-onebot>=2.0.0",
+    "pydantic>=1.10.0",
+    "yt-dlp>=2023.3.4",
+    "aiofiles>=0.8.0",
+    "loguru>=0.6.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+]
+dev = [
+    "black>=22.0.0",
+    "isort>=5.10.0",
+    "flake8>=4.0.0",
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "pre-commit>=2.20.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/j1udu/nonebot-plugin-bili2mp4"
+Repository = "https://github.com/j1udu/nonebot-plugin-bili2mp4"
+"Bug Reports" = "https://github.com/j1udu/nonebot-plugin-bili2mp4/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nonebot_plugin_bili2mp4*"]
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+length_sort = true
+
+
+
+[tool.nonebot]
+plugins = ["nonebot_plugin_bili2mp4"]

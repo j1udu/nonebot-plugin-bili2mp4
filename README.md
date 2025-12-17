@@ -59,7 +59,7 @@ pip install nonebot-plugin-bili2mp4
 ```toml
 plugins = ["nonebot_plugin_bili2mp4"]
 ```
-</details>s
+</details>
 
 ## 📦 依赖
 
@@ -93,6 +93,7 @@ sudo apt install ffmpeg
 brew install ffmpeg
 ```
 </details>
+
 ## ⚙️ 配置
 
 在 nonebot2 项目的`.env`文件中添加下表中的必填配置

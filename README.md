@@ -76,6 +76,7 @@ pip install yt-dlp
 <summary>ffmpeg</summary>
 
 插件依赖FFmpeg进行视频格式转换，需要手动安装：
+
 **Windows:**
 1. 访问 [FFmpeg官网](https://ffmpeg.org/) 下载Windows版本
 2. 解压下载的压缩包到任意目录（如 `C:\ffmpeg`）

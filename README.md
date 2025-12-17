@@ -28,17 +28,30 @@ nonebot-plugin-bili2mp4 是一个用于 NoneBot2 的插件，主要功能包括�
 
 - 自动检测群聊中的B站视频分享链接和小程序卡片识别并转换为MP4格式发到群里
 - 支持识别B站短链接
-- 支持管理员控制哪些群启用该功能
+- 支持控制开启的群
 - 支持自定义视频清晰度、大小限制等参数
 - 支持设置B站Cookie以获取更高清晰度或者大会员限定视频
 
 ## 💿 安装
-
+ 
 <details open>
 <summary>使用 nb-cli 安装</summary>
-在 nonebot2 项目的根目录下打开命令行, 输入以下指令即可安装
+在 nonebot2 项目的根目录下打开命令行，输入以下指令即可安装
 
-    nb plugin install nonebot-plugin-bili2mp4
+   nb plugin install nonebot-plugin-bili2mp4
+
+
+<summary>使用包管理器安装</summary>
+在 nonebot2 项目的插件目录下，打开命令行，根据你使用的包管理器，输入相应的安装命令
+
+**pip:**
+   pip install nonebot-plugin-bili2mp4
+
+打开 nonebot2 项目根目录下的 pyproject.toml 文件, 在 [tool.nonebot] 部分追加写入
+```bash
+plugins = ["nonebot_plugin_bili2mp4"]
+```
+</details>
 
 ## 📦 依赖
 
@@ -93,10 +106,12 @@ brew install ffmpeg
 | 查看参数 | 查看当前配置参数 |
 | 查看转换列表 | 查看已开启转换功能的群列表 |
 
-**注意**：
-以上指令均需超级管理员私聊bot
+**注**：
+以上指令均需管理员私聊bot
 
-Cookie中至少需要包含SESSDATA、bili_jct、DedeUserID和buvid3/buvid4四个字段，并且是大会员账号的cookie，否则无法保证能转化大会员视频与清晰度。
+Cookie可以不设置，设置大会员账号的cookie可以获取更高清晰度或者大会员限定视频
+
+Cookie中至少需要包含SESSDATA、bili_jct、DedeUserID和buvid3/buvid4四个字段
 ## 效果图
 <img src="images/picture1.png" width="500">
 <img src="images/picture2.png" width="500">

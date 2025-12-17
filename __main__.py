@@ -278,28 +278,10 @@ async def handle_group(bot: Bot, event: Event):
 # 私聊控制（超级管理员）
 ctrl_listener = on_message(priority=50, block=False)
 
-CMD_ENABLE_RE = re.compile(r"^转换(\d+)$")
-CMD_DISABLE_RE = re.compile(r"^停止转换(\d+)$")
+CMD_ENABLE_RE = re.compile(r"^转换\s*(\d+)$", flags=re.IGNORECASE)
+CMD_DISABLE_RE = re.compile(r"^停止转换\s*(\d+)$", flags=re.IGNORECASE)
 CMD_SET_COOKIE_RE = re.compile(r"^设置B站COOKIE\s+(.+)$", flags=re.S)
 CMD_CLEAR_COOKIE = {"清除B站COOKIE", "删除B站COOKIE"}
-CMD_LIST = {"查看转换列表", "查看列表"}
-CMD_SHOW_PARAMS = {"查看参数", "状态"}
-CMD_SET_HEIGHT_RE = re.compile(r"^设置清晰度\s*(\d+)\s*p?$", flags=re.I)
-CMD_SET_MAXSIZE_RE = re.compile(r"^设置最大大小\s*(\d+)\s*(?:mb|m)?$", flags=re.I)
-
-
-def _get_help_message() -> str:
-    """获取帮助消息"""
-    return (
-        "指令列表：\n"
-        "1) 转换<群号>\n"
-        "2) 停止转换<群号>\n"
-        "3) 设置B站COOKIE <cookie字符串>\n"
-        "4) 清除B站COOKIE\n"
-        "5) 设置清晰度<数字>（如 720/1080，0 代表不限制）\n"
-        "6) 设置最大大小<数字>MB（0 代表不限制）\n"
-        "7) 查看参数 / 查看转换列表"
-    )
 
 
 async def _handle_group_command(

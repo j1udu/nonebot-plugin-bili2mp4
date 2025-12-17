@@ -5,13 +5,13 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "nonebot-plugin-bili2mp4"
 version = "0.1.0"
-description = "在指定群内自动将B站小程序/分享链接解析并下载为MP4后发送的NoneBot2插件"
+description = "在指定群内将B站小程序/分享链接解析转MP4后发送的NoneBot2插件"
 readme = "README.md"
 requires-python = ">=3.8,<4.0"
-license = {text = "MIT"}
 authors = [
-    {name = "j1udu", email = "your-email@example.com"},
+    {name = "j1udu", email = "2312410042@stu.suda.edu.cn"},
 ]
+
 keywords = ["nonebot", "nonebot2", "bilibili", "video", "download", "mp4"]
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -30,7 +30,8 @@ dependencies = [
     "aiofiles>=0.8.0",
     "loguru>=0.6.0",
 ]
-
+[tool.setuptools.package-data]
+"nonebot_plugin_bili2mp4" = ["images/*"]
 [project.optional-dependencies]
 test = [
     "pytest>=7.0.0",

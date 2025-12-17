@@ -125,5 +125,5 @@ Cookie可以不设置，设置大会员账号的cookie可以获取更高清晰�
 
 Cookie中至少需要包含SESSDATA、bili_jct、DedeUserID和buvid3/buvid4四个字段
 ## 效果图
-<img src="images/picture1.png" width="500">
-<img src="images/picture2.png" width="500">
+<img src="nonebot_plugin_bili2mp4/images/picture1.png" width="500">
+<img src="nonebot_plugin_bili2mp4/images/picture2.png" width="500">

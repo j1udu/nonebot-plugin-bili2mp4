@@ -11,6 +11,7 @@ requires-python = ">=3.8,<4.0"
 authors = [
     {name = "j1udu", email = "2312410042@stu.suda.edu.cn"},
 ]
+license = {text = "MIT"}
 
 keywords = ["nonebot", "nonebot2", "bilibili", "video", "download", "mp4"]
 classifiers = [
@@ -25,7 +26,7 @@ classifiers = [
 dependencies = [
     "nonebot2>=2.3.0",
     "nonebot-adapter-onebot>=2.0.0",
-    "nonebot-plugin-localstore>=0.7.4",
+    "nonebot-plugin-localstore>=0.7.4,<1.0.0",
     "pydantic>=1.10.0",
     "yt-dlp>=2023.3.4",
     "aiofiles>=0.8.0",

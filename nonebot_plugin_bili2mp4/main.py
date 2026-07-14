@@ -456,7 +456,7 @@ def format_selector(ctx):
 
     # acodec='none' means there is no audio
     best_video = next(f for f in formats
-                      if f['vcodec'] != 'none' and f['vcodec'] != 'av01.0.00M.10.0.110.01.01.01.0' and f['acodec'] == 'none')
+                      if f['vcodec'] != 'none' and ("avc" in f['vcodec'] or "hvc" in f['vcodec']) and f['acodec'] == 'none')
 
     # find compatible audio extension
     audio_ext = {'mp4': 'm4a', 'webm': 'webm'}[best_video['ext']]
